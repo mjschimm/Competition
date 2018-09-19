@@ -33,6 +33,8 @@ class BST{
 					updateHeight(root);
 				};
 
+				void printLevel(int);
+
 				
 		private:
 	
@@ -67,6 +69,7 @@ class BST{
 				Tnode *root = NULL;
 				void clean(Tnode* cur);
 				Tnode* copy(Tnode* cur);
+				void printLevel(int depthLevel, Tnode *cur);
 };
 
 

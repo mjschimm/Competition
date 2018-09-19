@@ -178,3 +178,22 @@ Tnode* BST::insert(Tnode *cur, string akey, string aval){
       
 }//insert()
 
+void BST::printLevel(int depthLevel) {
+	printLevel(depthLevel, root);
+	cout << endl;
+}
+
+void BST::printLevel(int depthLevel, Tnode *cur) {
+	if(depthLevel == 0) {
+		cout << cur->key << " ";
+	}
+	else {
+		if (cur->left != NULL) {
+			printLevel(depthLevel-1, cur->left);
+		}
+		if(cur->right != NULL) {
+			printLevel(depthLevel-1, cur->right);
+		}
+	}
+}
+
