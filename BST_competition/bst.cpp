@@ -178,3 +178,18 @@ Tnode* BST::insert(Tnode *cur, string akey, string aval){
       
 }//insert()
 
+void BST::printLeafParent() {
+	printLeafParent(root);
+	cout << endl;
+}
+
+void BST::printLeafParent(Tnode *cur) {
+	if(cur->left->left == NULL || cur->left->right == NULL || cur->right->left == NULL || cur->right->right == NULL) {
+		cout << cur->key << " ";
+	}
+	else {
+		printLeafParent(cur->right);
+		printLeafParent(cur->left);
+	}
+}
+
