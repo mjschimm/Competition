@@ -1,0 +1,8 @@
+(be){best better bed beautiful bed beach } (fo){football food } (he){hello herb heart } (in){install inspire instagram internet } (lo){long local love loan } (ma){matrix } (mo){most modern movie } (mq){mquest } (mu){music multiple } (no){north } (pl){please plagiarism plural place } (re){red rent ready } (sp){special speed spell spanish spark } (th){the thanks they } 
+
+1 0 2 0 4 0 2 0 1 0 3 0 1 0 
+
+The sum of edges from LCA to mq and re is 5
+The sum of edges from LCA to fo and no is 7
+The sum of edges from LCA to mo and mu is 1
+The sum of edges from LCA to be and be is 0
