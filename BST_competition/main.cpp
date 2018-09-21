@@ -44,9 +44,6 @@ int main(int argc, char* argv[]){
 			cin >> k1 >> k2;
 			string res = numbers.leftmostLCA(k1, k2);
 			cout << "The leftmost node of LCA of " << k1 << " and " << k2 << " is " << res << endl;
-		}
-			// string res = numbers.leftmostLCA(k1, k2);
-			//cout << "The leftmost node of LCA of " << k1 << " and " << k2 << " is " << res << endl;
 		}else if(command == "sumLCA"){
 			string k1, k2;
 			cin >> k1 >> k2;
