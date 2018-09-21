@@ -53,7 +53,7 @@ int main(int argc, char* argv[]){
 			// int res = numbers.sumLCA(k1, k2);
 			//cout << "The sum of edges from LCA to " << k1 << " and " << k2 << " is " << res << endl;
 		}else if(command == "printLeafParent"){
-			// numbers.printLeafParent();
+			numbers.printLeafParent();
 
 		}else if(command == "emptyIntersection"){
 			string k1, k2;
