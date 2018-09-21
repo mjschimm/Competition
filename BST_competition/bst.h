@@ -32,6 +32,8 @@ class BST{
 					root = remove(root, ak);
 					updateHeight(root);
 				};
+				string leftmostLCA(string akey1, string akey2);
+				void traverseTree(Tnode *root, string akey1, string akey2, string & leftmostLCA);
 				void printLeafParent();
 
 				void printLevel(int);

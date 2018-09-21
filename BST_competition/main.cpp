@@ -16,24 +16,14 @@ int main(int argc, char* argv[]){
 	
     BST numbers;
 	string command;
+
 	while(cin >> command){//
-		if(command == "print_inorder"){
-			numbers.print_inorder();
-			cout << endl;
+		  if(command == "print_inorder"){
+		 	numbers.print_inorder();
+		 	cout << endl;
 		}else if(command == "heightPrint"){
 			numbers.heightPrint();
 			cout << endl;
-		}else if(command == "printBF"){
-			// numbers.printBF();
-			cout << endl;
-		}else if(command == "printSize"){
-			// numbers.printSize();
-			cout << endl;
-		}
-		else if(command == "findPrint"){
-			string akey;
-			cin >> akey;
-			// numbers.findPrint(akey);
 		}else if(command == "insert"){
 			string word;
 			cin >> word;
@@ -41,7 +31,7 @@ int main(int argc, char* argv[]){
 			cin >> len;
 			string akey = word.substr(0, len);
 			numbers.insert(akey, word);
-		}else if(command == "remove"){
+		 }else if(command == "remove"){
 			string akey;
 			cin >> akey;
 			numbers.remove(akey);
@@ -49,9 +39,12 @@ int main(int argc, char* argv[]){
 			int x;
 			cin >> x;
 			numbers.printLevel(x);
-		}else if(command == "leftmostLCA"){
+		 }else if(command == "leftmostLCA"){
 			string k1, k2;
 			cin >> k1 >> k2;
+			string res = numbers.leftmostLCA(k1, k2);
+			cout << "The leftmost node of LCA of " << k1 << " and " << k2 << " is " << res << endl;
+		}
 			// string res = numbers.leftmostLCA(k1, k2);
 			//cout << "The leftmost node of LCA of " << k1 << " and " << k2 << " is " << res << endl;
 		}else if(command == "sumLCA"){
