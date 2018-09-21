@@ -183,13 +183,28 @@ void BST::printLeafParent() {
 	cout << endl;
 }
 
-void BST::printLeafParent(Tnode *cur) {
-	if(cur->left->left == NULL || cur->left->right == NULL || cur->right->left == NULL || cur->right->right == NULL) {
-		cout << cur->key << " ";
+bool BST::printLeafParent(Tnode *cur) {
+
+	if(cur->right == NULL && cur->left == NULL) {
+		return true;
 	}
 	else {
-		printLeafParent(cur->right);
-		printLeafParent(cur->left);
+		bool is_parent_right = false;
+		bool is_parent_left = false;
+		if(cur->right != NULL) {
+			is_parent_right = printLeafParent(cur->right);
+			if(is_parent_right) {
+				cout << cur->key << " ";
+			}
+		}
+		if (cur->left != NULL) {
+			is_parent_left = printLeafParent(cur->left);
+			if(is_parent_right == false && is_parent_left == true) {
+				cout << cur->key << " ";
+			}
+		}
+		return false;
 	}
+
 }
 

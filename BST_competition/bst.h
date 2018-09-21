@@ -69,7 +69,7 @@ class BST{
 				Tnode *root = NULL;
 				void clean(Tnode* cur);
 				Tnode* copy(Tnode* cur);
-				void printLeafParent(Tnode *);
+				bool printLeafParent(Tnode *);
 };
 
 
