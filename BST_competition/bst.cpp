@@ -178,3 +178,31 @@ Tnode* BST::insert(Tnode *cur, string akey, string aval){
       
 }//insert()
 
+string BST::leftmostLCA(string akey1, string akey2){
+	string leftmostLCA = "";
+	Tnode * cur = root;
+	traverseTree(cur,akey1,akey2,leftmostLCA);
+	return leftmostLCA;
+}
+
+void BST::traverseTree(Tnode *cur, string akey1, string akey2,string & leftmostLCA){
+    if(cur == NULL){
+      return;
+    }
+    if((akey2 > cur->key) && (akey1 > cur->key)){
+      traverseTree(cur->right,akey1,akey2,leftmostLCA);
+    }else
+    if((akey2 < cur->key) && (akey1 < cur->key)){
+      traverseTree(cur->left,akey1,akey2,leftmostLCA);
+    }else{
+       Tnode * left = getLeftmost(cur);
+       leftmostLCA = left->key;
+       return;
+    }
+
+    traverseTree(cur->left,akey1,akey2,leftmostLCA);
+}
+
+
+
+

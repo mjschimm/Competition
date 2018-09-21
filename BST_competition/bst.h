@@ -32,6 +32,15 @@ class BST{
 					root = remove(root, ak);
 					updateHeight(root);
 				};
+				/*
+				void printBF();
+				void printSize();
+				void findPrint();
+				//string leftmostLCA();
+				*/
+				string leftmostLCA(string akey1, string akey2);
+				void traverseTree(Tnode *root, string akey1, string akey2, string & leftmostLCA);
+				//int sumLCA(string k1, string k2);
 
 				
 		private:
