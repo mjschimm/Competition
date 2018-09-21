@@ -32,6 +32,7 @@ class BST{
 					root = remove(root, ak);
 					updateHeight(root);
 				};
+				void printLeafParent();
 
 				void printLevel(int);
 
@@ -69,6 +70,7 @@ class BST{
 				Tnode *root = NULL;
 				void clean(Tnode* cur);
 				Tnode* copy(Tnode* cur);
+				bool printLeafParent(Tnode *);
 				void printLevel(int depthLevel, Tnode *cur);
 };
 

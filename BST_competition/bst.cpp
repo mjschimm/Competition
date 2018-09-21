@@ -178,6 +178,35 @@ Tnode* BST::insert(Tnode *cur, string akey, string aval){
       
 }//insert()
 
+void BST::printLeafParent() {
+	printLeafParent(root);
+	cout << endl;
+}
+
+bool BST::printLeafParent(Tnode *cur) {
+
+	if(cur->right == NULL && cur->left == NULL) {
+		return true;
+	}
+	else {
+		bool is_parent_right = false;
+		bool is_parent_left = false;
+		if(cur->right != NULL) {
+			is_parent_right = printLeafParent(cur->right);
+			if(is_parent_right) {
+				cout << cur->key << " ";
+			}
+		}
+		if (cur->left != NULL) {
+			is_parent_left = printLeafParent(cur->left);
+			if(is_parent_right == false && is_parent_left == true) {
+				cout << cur->key << " ";
+			}
+		}
+		return false;
+	}
+}
+
 void BST::printLevel(int depthLevel) {
 	printLevel(depthLevel, root);
 	cout << endl;
